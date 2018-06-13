@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 
+const defaultPort = 5000;
 const sourceFileBuildDirectory = 'client/build';
 const defaultSourceDocument = 'index.html';
 
@@ -27,10 +28,10 @@ app.get('/api/passwords', (req, res) => {
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, sourceFileBuildDirectory + defaultSourceDocument));
+  res.sendFile(path.join(__dirname, sourceFileBuildDirectory, defaultSourceDocument));
 });
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || defaultPort;
 app.listen(port);
 
 console.log(`IOIO website server listening on ${port}`);
