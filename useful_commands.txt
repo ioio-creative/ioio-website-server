@@ -1,0 +1,14 @@
+Linux:
+cd ~/apps/ioio-website-wordpress-react
+npm run build
+rm -r ~/apps/ioio-website-server/client/build/*
+cp ~/apps/ioio-website-wordpress-react/build ~/apps/ioio-website-server/client/build
+
+Windows:
+cd C:\Users\IOIO\Documents\Projects\React\ioio-website-wordpress-react
+npm run build
+// https://stackoverflow.com/questions/12748786/delete-files-or-folder-recursively-on-windows-cmd
+rmdir /q /s C:\Users\IOIO\Documents\Projects\NodeJs\ioio-website-server\client\build
+mkdir C:\Users\IOIO\Documents\Projects\NodeJs\ioio-website-server\client\build
+// https://www.petefreitag.com/item/99.cfm
+xcopy /y /e C:\Users\IOIO\Documents\Projects\React\ioio-website-wordpress-react\build C:\Users\IOIO\Documents\Projects\NodeJs\ioio-website-server\client\build
