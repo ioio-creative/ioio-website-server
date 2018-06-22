@@ -2,12 +2,7 @@
   "name": "ioio-website-server",
   "version": "1.0.0",
   "description": "This server is based on the very good tutorial \"Deploy React and Express to Heroku\" by Dave Ceddia. https://daveceddia.com/deploy-react-express-app-heroku/",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cross-env PORT=3000 node index.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
-  },
+  "main": "index.js",  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ioio-creative/ioio-website-server.git"
@@ -23,5 +18,10 @@
     "cross-env": "^5.2.0",
     "express": "^4.16.3",
     "path": "^0.12.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",    
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "start": "cross-env PORT=8080 node index.js"
   }
 }
