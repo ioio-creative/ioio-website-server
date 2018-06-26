@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 
-const defaultPort = 5000;
+const defaultPort = 8080;
 const sourceFileBuildDirectory = 'client/build';
 const defaultSourceDocument = 'index.html';
 
