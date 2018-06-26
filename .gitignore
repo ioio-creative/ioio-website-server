@@ -61,4 +61,4 @@ typings/
 .next
 
 
-#client/build/*
+client/build/*
